@@ -58,5 +58,6 @@
         <module>junit4-rule-xstream</module>
         <module>junit4-agent</module>
         <module>junit4-delegate</module>
+        <module>testng</module>
     </modules>
 </project>

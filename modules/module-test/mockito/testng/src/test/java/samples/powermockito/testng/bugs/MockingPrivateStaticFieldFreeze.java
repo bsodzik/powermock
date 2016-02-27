@@ -3,6 +3,7 @@ package samples.powermockito.testng.bugs;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
 import org.powermock.core.classloader.annotations.PrepareForTest;
+import org.powermock.modules.testng.PowerMockTestCase;
 import org.slf4j.Logger;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -20,7 +21,7 @@ import static org.testng.AssertJUnit.assertTrue;
  *
  */
 @PrepareForTest({LoggerFactory.class, Logger.class})
-public class MockingPrivateStaticFieldFreeze {
+public class MockingPrivateStaticFieldFreeze extends PowerMockTestCase {
 
     private Logger loggerMock;
     private AtomicBoolean atomicBoolean = new AtomicBoolean(false);

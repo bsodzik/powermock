@@ -25,7 +25,6 @@ import static org.powermock.api.mockito.PowerMockito.mockStatic;
  */
 @FixMethodOrder(MethodSorters.JVM)
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({LoggerFactory.class})
 public class MockingPrivateStaticFieldFreeze {
 
     private Logger loggerMock;
@@ -50,6 +49,7 @@ public class MockingPrivateStaticFieldFreeze {
 
 
 
+    @PrepareForTest({LoggerFactory.class})
     @Test
     public void testMockingPrivateStaticFieldFreezeStateOfMockAfterFirstUse_firstUse() throws Exception {
 
@@ -62,6 +62,7 @@ public class MockingPrivateStaticFieldFreeze {
 
     }
 
+    @PrepareForTest({LoggerFactory.class})
     @Test
     public void testMockingPrivateStaticFieldFreezeStateOfMockAfterFirstUse_secondUse() throws Exception {
 
